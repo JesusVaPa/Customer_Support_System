@@ -1,0 +1,16 @@
+{
+  "name": "customer_support_system",
+  "version": "1.0.0",
+  "description": "Many businesses struggle to provide efficient and personalized customer support due to the huge number of inquiries. Manual handling of customer queries which can lead to delays in responses. A machine learning-powered customer support system can automate responses to common issues. In this project I am building an e-commerce website and integrate it with ML and LLM to solve this issue.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {}
+}
