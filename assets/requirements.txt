@@ -1,12 +1,10 @@
-#conda==24.3.0
-python==3.12.1
 flask==3.0.3
-# pymongo==4.6.3
+Flask-WTF==1.2.1
+Flask-Login==0.6.3
+Werkzeug==3.0.3
 transformers==4.39.1
 matplotlib==3.8.3
 seaborn==0.13.2
 nltk==3.8.1
-Flask-WTF==1.2.1
-Flask-Login==0.6.3
-Werkzeug==3.0.3
-sqlite3==3.41.2
+flask_sqlalchemy==3.0.4
+email_validator==2.1.1

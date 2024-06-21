@@ -20,11 +20,13 @@ from Ticket import Tickets
 from Category import Categories
 import FAQ
 import Authentication as Auth
+
 # Create Flask app instance
 app = Flask(__name__)
 app.secret_key = '##Secret##' #for flash
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\Projects\Customer_support\Database\database.db'  
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\vapaj\\Documents\\Customer_Support_System\\Database\\database.db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # The SQLAlchemy object

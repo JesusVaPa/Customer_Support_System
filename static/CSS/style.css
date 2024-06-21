@@ -1,22 +1,45 @@
 body, html {
-    height: 100%; /* Ensure the body and html elements take up the full height of the viewport */
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 .content {
-    height: 100%; /* Set the height of the content container to fill the viewport */
-    overflow: auto; /* Enable scrolling when content overflows the container */
-    padding: 20px; /* Add padding to avoid content sticking to the edges */
+    
+    min-height: 100%;
+    overflow: auto;
+    padding: 20px;    
 }
 
-
-.my_btn{
-background-color: #333;
-border-color: transparent;
+.content p{
+    text-align: center;
 }
 
-.my_btn > a{
+.video-container {
+    padding-top: 150px;
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    overflow: hidden;
+    text-align: center;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+.my_btn {
+    background-color: #333;
+    border-color: transparent;
+}
+
+.my_btn > a {
     color: #fff;
 }
 
@@ -25,15 +48,13 @@ border-color: transparent;
     border: none;
 }
 
-
 /* Index Page */
 
 .hero {
     position: relative;
     text-align: center;
     padding: 100px 0;
-    background-image: url('../../static/img/slider.jpg');
-    background-color: #f2f2f2; /* Fallback background color */
+    background-color: #f2f2f2;
     background-position: center;
     background-size: cover;
 }
@@ -44,14 +65,14 @@ border-color: transparent;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.297); /* White with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.297);
 }
 
 .hero h1, .hero p {
-    position: relative; /* Ensure text appears above overlay */
-    color: white; /* Text color */
-    padding: 5px; /* Padding to create space around text */
-    background-color: rgba(0, 0, 0, 0.4); /* Black with 30% opacity */
+    position: relative;
+    color: white;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
@@ -63,20 +84,34 @@ border-color: transparent;
     font-size: 1.5em;
     margin-bottom: 40px;
 }
-
 .index_btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 1.2em;
+    border: 2px solid white;
     border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.index_btn:hover {
+    background-color: white;
+    color: #333333;
 }
 
 .featured-products {
     text-align: center;
     padding: 50px 0;
+}
+
+.logo {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .product {
@@ -98,6 +133,66 @@ border-color: transparent;
 
 .product p {
     font-size: 1.2em;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-item-has-children > a::after {
+    color: #333;
+    content: ' ▼';
+}
+
+.sub-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu .menu-item {
+    width: 200px;
+}
+
+.sub-menu .menu-item > a {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sub-menu .menu-item > a:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar{
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: 0.5px solid #ccc; */
+}
+.navbar-toggler{
+    padding-left: 150px;
 }
 
 .newsletter {
@@ -129,9 +224,26 @@ border-color: transparent;
     cursor: pointer;
 }
 
+.site-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.site-search form {
+    display: flex;
+}
+
+.site-search input[type="search"] {
+    border-radius: 5px 0 0 5px;
+}
+
+.site-search button {
+    border-radius: 0 5px 5px 0;
+}
 
 /* My Footer */
 .my_footer {
-    margin-top:  120px;
+    margin-top: 120px;
 }
-
